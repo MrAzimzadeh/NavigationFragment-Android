@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.azimzada.navigationcomponentkullanimi.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/oyunEkraninaKecis"
+            app:destination="@id/oyunEkraniFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oyunEkraniFragment"
+        android:name="com.azimzada.navigationcomponentkullanimi.OyunEkraniFragment"
+        android:label="fragment_oyun_ekrani"
+        tools:layout="@layout/fragment_oyun_ekrani" >
+        <action
+            android:id="@+id/SonucEkraninaKecis"
+            app:destination="@id/sonucEkraniFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sonucEkraniFragment"
+        android:name="com.azimzada.navigationcomponentkullanimi.SonucEkraniFragment"
+        android:label="fragment_sonuc_ekrani"
+        tools:layout="@layout/fragment_sonuc_ekrani" />
+</navigation>
